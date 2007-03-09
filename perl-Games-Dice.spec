@@ -14,7 +14,7 @@ Release:	0.1
 # "same as perl"
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Games/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Games/RJBS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	550794c12e2aaec2b2940e8c7fc331d8
 URL:		http://search.cpan.org/dist/Games-Dice/
 BuildRequires:	perl-devel >= 1:5.8.0
