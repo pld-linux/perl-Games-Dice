@@ -1,14 +1,13 @@
-# NOTE
-# - you should consider using pldcpan for new perl packages
 #
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Games
 %define		pnam	Dice
-Summary:	perl(Games::Dice)
+Summary:	Games::Dice Perl module - a set of dice for rolling
+Summary(pl.UTF-8):	Moduł Perla Games::Dice - zbiór kości do rzucania
 Name:		perl-Games-Dice
 Version:	0.99_01
 Release:	0.1
@@ -26,9 +25,17 @@ BuildRequires:	perl-Class-Container
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
-dice rolling module
+A Games::Dice object represents a set of dice, which are represented
+by Games::Dice objects. A set of dice can be rolled, and returns a
+Games::Dice::Results object. The default behavior of dice and dice
+sets is simple, but can easily be augmented with subclassing.
+
+%description -l pl.UTF-8
+Obiekt Games::Dice reprezentuje zbiór kości do gry reprezentowanych
+przez obiekty Games::Dice. Mogą one być rzucone, zwracają wtedy obiekt
+Games::Dice::Results. Domyślne zachowanie kości jest proste, ale może
+być łatwo rozszerzone przez podklasy.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
